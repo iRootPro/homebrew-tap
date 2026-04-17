@@ -5,21 +5,21 @@
 class Rdr < Formula
   desc "Terminal RSS/Atom reader with vim navigation, full article rendering and smart folders"
   homepage "https://github.com/iRootPro/rdr"
-  version "0.3.3"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/iRootPro/rdr/releases/download/v0.3.3/rdr_darwin_amd64.tar.gz"
-      sha256 "213a94142332549c5b9dfbfb38b16ab88f9c7ae5dc2f07ef6704a3a00c225a8c"
+      url "https://github.com/iRootPro/rdr/releases/download/v0.4.0/rdr_darwin_amd64.tar.gz"
+      sha256 "c5dcaf75164ef6ef34027043d3821eed9a3ac65a3812f42ab9e21768dcf6a7db"
 
       define_method(:install) do
         bin.install "rdr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/iRootPro/rdr/releases/download/v0.3.3/rdr_darwin_arm64.tar.gz"
-      sha256 "ad245e4c9c4a9cbbeeef0bdc7582aaa5d6e20c85b80b5c3c15d3c6bbe746cc0b"
+      url "https://github.com/iRootPro/rdr/releases/download/v0.4.0/rdr_darwin_arm64.tar.gz"
+      sha256 "3395fa8f30cdfdaf370184a758ba668631343d80c3b3f5db2d9323fffef8d2ce"
 
       define_method(:install) do
         bin.install "rdr"
@@ -29,15 +29,15 @@ class Rdr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iRootPro/rdr/releases/download/v0.3.3/rdr_linux_amd64.tar.gz"
-      sha256 "4382e29c65c231835803a2a2e21cb4fa605cba983f861b3e38b2b9774ccb6aff"
+      url "https://github.com/iRootPro/rdr/releases/download/v0.4.0/rdr_linux_amd64.tar.gz"
+      sha256 "6d06ffc3c36d23c80aa448220c79cd44b3ebee5f7c2f88af6be037d958dc6ec3"
       define_method(:install) do
         bin.install "rdr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iRootPro/rdr/releases/download/v0.3.3/rdr_linux_arm64.tar.gz"
-      sha256 "e2268ef93664a3420f1a2d88b17fe8e309a8d4bd09cf299797ff07a15db99a9c"
+      url "https://github.com/iRootPro/rdr/releases/download/v0.4.0/rdr_linux_arm64.tar.gz"
+      sha256 "de0326744f70102b658c04d52195bffcd83c1939034dd07ba1fb65afa4206eea"
       define_method(:install) do
         bin.install "rdr"
       end
