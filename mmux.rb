@@ -2,14 +2,14 @@
 # frozen_string_literal: true
 
 class Mmux < Formula
-  desc "Keyboard-first Mattermost/Band TUI"
+  desc "Keyboard-first TUI for Mattermost-compatible chat"
   homepage "https://github.com/iRootPro/mmux"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/iRootPro/mmux/releases/download/v0.1.0/band-tui_v0.1.0_darwin_amd64.tar.gz"
-      sha256 "5f4579c43715e1f971fa119393802108aa13e380202ca2d83cd8e5649e057838"
+      url "https://github.com/iRootPro/mmux/releases/download/v0.1.1/mmux_v0.1.1_darwin_amd64.tar.gz"
+      sha256 "9cdeef82e3400ff979bfc60d021026ed57663ade431d30e0855d9b3705952b17"
 
       define_method(:install) do
         install_binary
@@ -17,8 +17,8 @@ class Mmux < Formula
     end
 
     if Hardware::CPU.arm?
-      url "https://github.com/iRootPro/mmux/releases/download/v0.1.0/band-tui_v0.1.0_darwin_arm64.tar.gz"
-      sha256 "1e4b2832e8b56b39aab3e11b70472950267d3de34560d5ffe7cc2a6b8c108ac0"
+      url "https://github.com/iRootPro/mmux/releases/download/v0.1.1/mmux_v0.1.1_darwin_arm64.tar.gz"
+      sha256 "45349558c5977dd14543f6a494b7b35a1a85879b80f5b542ac6594bbd75b48d6"
 
       define_method(:install) do
         install_binary
@@ -28,8 +28,8 @@ class Mmux < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iRootPro/mmux/releases/download/v0.1.0/band-tui_v0.1.0_linux_amd64.tar.gz"
-      sha256 "fe089b246cac619c515e453f098bd2e1326a23482542652b842506574bf2b3e2"
+      url "https://github.com/iRootPro/mmux/releases/download/v0.1.1/mmux_v0.1.1_linux_amd64.tar.gz"
+      sha256 "64be49fb697f7bc12d7267eaadc3a777b4ae1819d36109b6fba4ad93d4c21e72"
 
       define_method(:install) do
         install_binary
@@ -37,8 +37,8 @@ class Mmux < Formula
     end
 
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iRootPro/mmux/releases/download/v0.1.0/band-tui_v0.1.0_linux_arm64.tar.gz"
-      sha256 "dc9c67336e0ac084243d52955bd5f8ceac5db4f3ca2854434563bdd8194d01cd"
+      url "https://github.com/iRootPro/mmux/releases/download/v0.1.1/mmux_v0.1.1_linux_arm64.tar.gz"
+      sha256 "b900c2cc66d1992f14fbb30759b7fe94c46db9d3a0b5f6755be1e47ba7d083a7"
 
       define_method(:install) do
         install_binary
@@ -47,12 +47,11 @@ class Mmux < Formula
   end
 
   def install_binary
-    binary = Dir["band-tui*/band-tui"].first || "band-tui"
-    bin.install binary => "band-tui"
-    bin.install_symlink "band-tui" => "mmux"
+    binary = Dir["mmux*/mmux"].first || "mmux"
+    bin.install binary => "mmux"
   end
 
   test do
-    assert_match "band-tui", shell_output("#{bin}/mmux --help")
+    assert_match "mmux", shell_output("#{bin}/mmux --help")
   end
 end
