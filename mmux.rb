@@ -4,12 +4,12 @@
 class Mmux < Formula
   desc "Keyboard-first TUI for Mattermost-compatible chat"
   homepage "https://github.com/iRootPro/mmux"
-  version "0.1.8"
+  version "0.1.9"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/iRootPro/mmux/releases/download/v0.1.8/mmux_v0.1.8_darwin_amd64.tar.gz"
-      sha256 "643f622bc2c5eb3dbd50dfef998e2abdeb31dad21bd480b6a7a33c90bc302fa9"
+      url "https://github.com/iRootPro/mmux/releases/download/v0.1.9/mmux_v0.1.9_darwin_amd64.tar.gz"
+      sha256 "9d2b25a6b8ee3a6131c2cfd69c886f83b070dc3f260d9180eeefbfde1d8324b2"
 
       define_method(:install) do
         install_binary
@@ -17,8 +17,8 @@ class Mmux < Formula
     end
 
     if Hardware::CPU.arm?
-      url "https://github.com/iRootPro/mmux/releases/download/v0.1.8/mmux_v0.1.8_darwin_arm64.tar.gz"
-      sha256 "eb1c76c204a87111ef7ab5c274a0b857a42596d243d7a9823e39678fabaa6a8e"
+      url "https://github.com/iRootPro/mmux/releases/download/v0.1.9/mmux_v0.1.9_darwin_arm64.tar.gz"
+      sha256 "b96e049ae3122e528e51e3383aebbce4aa9c521018f7eaaeee1e3346717f8c39"
 
       define_method(:install) do
         install_binary
@@ -28,8 +28,8 @@ class Mmux < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iRootPro/mmux/releases/download/v0.1.8/mmux_v0.1.8_linux_amd64.tar.gz"
-      sha256 "c17aa5c34211881f1b63a5422f9d8544259d072ac297dc124e8441c4e8504b0b"
+      url "https://github.com/iRootPro/mmux/releases/download/v0.1.9/mmux_v0.1.9_linux_amd64.tar.gz"
+      sha256 "116be404029978b5e8bc54800c2f539c7b28e5d8cec2e50904c4db6a381dfb0a"
 
       define_method(:install) do
         install_binary
@@ -37,8 +37,8 @@ class Mmux < Formula
     end
 
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iRootPro/mmux/releases/download/v0.1.8/mmux_v0.1.8_linux_arm64.tar.gz"
-      sha256 "56c321cfac37436c372f68e1e648b3ce134f4689b8622ffa9bb996e92230d41b"
+      url "https://github.com/iRootPro/mmux/releases/download/v0.1.9/mmux_v0.1.9_linux_arm64.tar.gz"
+      sha256 "439b0a0d4818b62731705bce8edb7943c572184ddb51db45c8ce8af90fa6c457"
 
       define_method(:install) do
         install_binary
