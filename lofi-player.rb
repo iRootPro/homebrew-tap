@@ -5,7 +5,7 @@
 class LofiPlayer < Formula
   desc "Keyboard-driven TUI for lofi, chillhop and ambient internet radio"
   homepage "https://github.com/iRootPro/lofi-player"
-  version "0.1.9"
+  version "0.1.10"
   license "MIT"
 
   depends_on "mpv"
@@ -13,16 +13,16 @@ class LofiPlayer < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/iRootPro/lofi-player/releases/download/v0.1.9/lofi-player_0.1.9_darwin_amd64.tar.gz"
-      sha256 "471754ca783ad13cf250c1ea1986ca2f7d2dfb53095f6febeed3666fdece214c"
+      url "https://github.com/iRootPro/lofi-player/releases/download/v0.1.10/lofi-player_0.1.10_darwin_amd64.tar.gz"
+      sha256 "b47ffe601092d561c61404117c367a9e95106d899878eff2b56f152c9b85fa9d"
 
       define_method(:install) do
         bin.install "lofi-player"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/iRootPro/lofi-player/releases/download/v0.1.9/lofi-player_0.1.9_darwin_arm64.tar.gz"
-      sha256 "61c152a53530488f646e764f7d5f981b60504a3da3c51e1115fdeb8c0f045695"
+      url "https://github.com/iRootPro/lofi-player/releases/download/v0.1.10/lofi-player_0.1.10_darwin_arm64.tar.gz"
+      sha256 "d109d8a315372dc15830f8b7033003e43d532945f0073bffef6d9b661b2854c0"
 
       define_method(:install) do
         bin.install "lofi-player"
@@ -32,15 +32,15 @@ class LofiPlayer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iRootPro/lofi-player/releases/download/v0.1.9/lofi-player_0.1.9_linux_amd64.tar.gz"
-      sha256 "84dac145185101b8e2995ba569fe61e0ea7c3f100bcc91f74194cddaa44e0691"
+      url "https://github.com/iRootPro/lofi-player/releases/download/v0.1.10/lofi-player_0.1.10_linux_amd64.tar.gz"
+      sha256 "40a1f52cc78ff89f94eac089470eadc2c0301bc639b4440ec3a112c008196e61"
       define_method(:install) do
         bin.install "lofi-player"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iRootPro/lofi-player/releases/download/v0.1.9/lofi-player_0.1.9_linux_arm64.tar.gz"
-      sha256 "5e4e5a16c9df8ee258639d9a6c489ee794944b3a4c6f4d187b8cf0a7bd6d31ed"
+      url "https://github.com/iRootPro/lofi-player/releases/download/v0.1.10/lofi-player_0.1.10_linux_arm64.tar.gz"
+      sha256 "525519dd9050b4e0d0e96bd912902bbdf72f4cd3c23f6bddabd715ba3c6d6786"
       define_method(:install) do
         bin.install "lofi-player"
       end
